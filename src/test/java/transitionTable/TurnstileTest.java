@@ -2,12 +2,14 @@ package transitionTable;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import turnstile.transitionTable.ETurnstileEvent;
 import turnstile.transitionTable.ITurnstileController;
 import turnstile.transitionTable.Turnstile;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TurnstileTest {
 	private class TurnstileControllerMock implements ITurnstileController {
 		boolean doUnlockCalled;

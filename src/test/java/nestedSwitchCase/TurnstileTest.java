@@ -2,11 +2,13 @@ package nestedSwitchCase;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import turnstile.nestedSwitchCase.ETurnstileEvent;
 import turnstile.nestedSwitchCase.Turnstile;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TurnstileTest {
 	private class TurnstileControllerMock implements turnstile.nestedSwitchCase.ITurnstileController {
 		boolean doUnlockCalled;

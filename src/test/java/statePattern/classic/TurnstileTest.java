@@ -2,11 +2,13 @@ package statePattern.classic;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import turnstile.statePattern.classic.ITurnstileController;
 import turnstile.statePattern.classic.Turnstile;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TurnstileTest {
 	private class TurnstileControllerMock implements ITurnstileController {
 		boolean doUnlockCalled;
